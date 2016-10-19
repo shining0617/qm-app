@@ -1,0 +1,20 @@
+
+// Mixins
+ 
+@mixin box-sizing($fmt) {
+  -webkit-box-sizing: $fmt;
+     -moz-box-sizing: $fmt;
+          box-sizing: $fmt;
+}
+
+@mixin box-shadow($fmt) {
+  -webkit-box-shadow: $fmt;
+          box-shadow: $fmt;
+}
+
+@function fade($color, $amnt) {
+  @if $amnt > 1 {
+    $amnt: $amnt / 100; // convert to percentage if int
+  }
+  @return rgba($color, $amnt);
+}
