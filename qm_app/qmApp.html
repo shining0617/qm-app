@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>haml</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1"> 
+<link href="css/jquery.mobile-1.4.5.css" rel="stylesheet"> 
+<link href="css/styles.css" rel="stylesheet"> 
+</head>
+<body>
+	<header data-role="header"  data-position="fixed" class="ui-grid-e">
+		<span class="ui-block-a pageTitle">公司标志</span>
+		<nav data-role="navbar" class="ui-block-b"> 
+			<a href="#popMenu" data-icon="menu"  data-rel="popup" data-transition="slide" class="ui-btn-icon-notext ui-btn-right">菜单</a> 
+		</nav>
+		<span class="collect"><img src="images/collection.png" alt="collection"></span>  
+		<div data-role="popup" data-shadow="false" id="popMenu">
+			<div class="navUserArea">
+				<span class="photo"><img src="images/photo.png" alt="photo"></span>
+				<span>Joey Kevin</span>
+			</div>
+			<ul data-role="listview">
+				<li data-icon="navHome" data-iconpos="left"><a href="#home" >首页</a></li>
+				<li data-icon="navPersonal"><a href="#personal">个人中心</a></li>
+				<li data-icon="navTeam"><a href="#team">团队中心</a></li>
+				<li data-icon="navContent"><a href="#content">内容</a></li>
+				<li data-icon="navActivity"><a href="#activity">活动</a></li>
+				<li data-icon="navStore"><a href="#allStore">门店</a></li>
+				<li data-icon="navGuide"><a href="#guide">引导</a></li>
+				<li data-icon="loginOut"><a href="#guide">登出</a></li>
+			</ul>
+		</div>
+	</header><!-- /header -->
+	<div data-role="page"  data-theme="e"  id="login">  
+		<div  data-role="content" class="ui-content" data-theme="e">
+			<h1>使用手机号登录</h1>
+			<form id="loginForm">
+				<label>+86</label><input type="text" placeholder="请填写手机号" value="" name="telphone">
+				<label>密码</label><input type="text" placeholder="请填写密码" value="" name="password">
+				<a href="#home" class="ui-btn ui-corner-all" data-theme="e" data-role="btn"  data-ajax="false">登录</a>
+				<p class="text-center">还没有账号,我要注册</p>
+			</form> 
+		</div> 
+
+	</div><!-- login page --> 
+	<div data-role="page" data-theme="e"  id="home" data-navTitle="公司标志">   
+		<div  data-role="content" class="ui-content">
+			<div class="banner"><img src="images/banner.jpg" alt="banner"></div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#activity" data-icon="navActivity">活动</a></li>
+					<li><a href="#content" data-icon="navContent">内容</a></li>
+					<li><a href="#personal" data-icon="navPersonal">个人</a></li>
+				</ul>
+			</div>
+			<h2 class="contentTitle">最新内容</h2>
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false"><a href="#">
+					<img src="images/album-af.jpg" alt="" class="circleImg">
+					<h3 class="starTitle">图文标题01</h3>
+					<div class="tags">
+						<span class="tag">图文</span><span class="tag">消息</span>
+					</div>
+					<p>来参加我们的45分钟的男性是海岸城的主...</p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-ag.jpg" alt="" class="circleImg">
+					<h3 class="starTitle">图文标题02</h3>
+					<div class="tags">
+						<span class="tag">产品</span>
+					</div>
+					<p>说明: 来参加我们的45分钟的男性是海岸城...</p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-bb.jpg" alt="" class="circleImg">
+					<h3>图文标题03</h3>
+					<div class="tags">
+						<span class="tag">男士20~30岁的短袖衬衫</span> 
+					</div>
+					<p>来参加我们的45分钟的男性是海岸城的主...</p>
+				</a></li>
+				<li data-icon="false" class="noBrd"><a href="#">
+					<img src="images/album-hc.jpg" alt="" class="circleImg">
+					<h3>图文标题04</h3>
+					<div class="tags">
+						<span class="tag">图文</span><span class="tag">消息</span>
+					</div>
+					<p>男士20~30岁的短袖衬衫...</p>
+				</a></li>
+			</ul>
+			<h2 class="contentTitle">最热产品</h2>
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false"><a href="#">
+					<img src="images/album-af.jpg" alt="" class="circleImg">
+					<h3>产品名称01</h3> 
+					<p><span>销售量:12万</span><span>价格: ¥5487.48/个</span></p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-ag.jpg" alt="" class="circleImg">
+					<h3>产品名称01</h3> 
+					<p><span>销售量:12万</span><span>价格: ¥5487.48/个</span></p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-bb.jpg" alt="" class="circleImg">
+					<h3>产品名称01</h3> 
+					<p><span>销售量:12万</span><span>价格: ¥5487.48/个</span></p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-hc.jpg" alt="" class="circleImg">
+					<h3>产品名称01</h3> 
+					<p><span>销售量:12万</span><span>价格: ¥5487.48/个</span></p>
+				</a></li>
+			</ul>
+		</div>
+	</div><!-- home page -->
+	<div data-role="page" data-theme="e"  id="activity" data-navTitle="活动">  
+		<div  data-role="content" class="ui-content">
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false" class="ui-li-no-thumb">
+					<a href="#activityDetail"> 
+						<h3 class="starTitle">活动名称01</h3> 
+						<p>上海静安门店</p>
+						<p>说明: 此活动限于上海徐汇门店金卡会员,衣服八折优...
+ 2015/8/12,15:00 -2016/9/2,16:00</p>
+					</a>
+				</li>
+				<li data-icon="false" class="ui-li-no-thumb">
+					<a href="#activityDetail"> 
+						<h3 class="starTitle">活动名称02</h3> 
+						<p>上海静安门店</p>
+						<p>说明: 此活动限于上海徐汇门店金卡会员,衣服八折优...
+ 2015/8/12,15:00 -2016/9/2,16:00</p>
+					</a>
+				</li>
+				<li data-icon="false" class="ui-li-no-thumb">
+					<a href="#activityDetail"> 
+						<div class="listBanner"><img src="images/banner.jpg" alt="banner"></div>
+						<h3>活动名称03</h3> 
+						<p>上海静安门店</p>
+						<p>说明: 此活动限于上海徐汇门店金卡会员,衣服八折优...
+ 2015/8/12,15:00 -2016/9/2,16:00</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div><!-- activity page -->
+	<div data-role="page" data-theme="e"  id="activityDetail">  
+		<div class="qrcode">
+			<div class="qrcodeBox"><img src="images/qrcode.jpg" alt="activity"></div>
+		</div>
+		<div  data-role="content" class="ui-content">
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false" class="ui-li-no-thumb">
+					<a href="#activityDetail"> 
+						<div class="listBanner"><img src="images/banner.jpg" alt="banner"></div>
+						<h3>活动名称03</h3> 
+						<p>上海静安门店</p>
+						<p>说明: 此活动限于上海徐汇门店金卡会员,衣服八折优...
+ 2015/8/12,15:00 -2016/9/2,16:00</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div><!-- activity detail page -->
+	<div data-role="page" data-theme="e"  id="content" data-navTitle="内容">  
+		<div class="filterSearch">
+			<a href="#filterDetail" class="icon filter"></a>
+			<a href="#searchDetail" data-rel="popup" data-transition="slide" class="searchLink">搜索</a>
+			<div id="searchDetail" class="searchDetail" data-role="popup" data-inset="false" data-shadow="false"> 
+				<a href="#content" data-close="true" class="cancelSearch" data-role="button">取消</a>
+				<ul class="searchResult" data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search...">
+					<li>上海静安门店一号</li>
+					<li>上海静安门店二号</li>
+				</ul>
+			</div>
+        </div>
+		<div  data-role="content" class="ui-content">
+			<h2 class="leftTitle"  style="margin-top:0">收藏</h2>
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false"><a href="#contentDetail">
+					<img src="images/album-af.jpg" alt="" class="circleImg">
+					<h3 class="starTitle">图文标题01</h3>
+					<div class="tags">
+						<span class="tag">图文</span><span class="tag">消息</span>
+					</div>
+					<p>来参加我们的45分钟的男性是海岸城的主...</p>
+				</a></li>
+				<li data-icon="false"><a href="#contentDetail">
+					<img src="images/album-ag.jpg" alt="" class="circleImg">
+					<h3 class="starTitle">图文标题02</h3>
+					<div class="tags">
+						<span class="tag">产品</span>
+					</div>
+					<p>说明: 来参加我们的45分钟的男性是海岸城...</p>
+				</a></li> 
+			</ul>
+			<h2 class="leftTitle">男士衣服</h2>
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false"><a href="#">
+					<img src="images/album-af.jpg" alt="#contentDetail" class="circleImg">
+					<h3>图文标题01</h3>
+					<div class="tags">
+						<span class="tag">男士20~30岁的短袖衬衫</span> 
+					</div>
+					<p>来参加我们的45分钟的男性是海岸城的主...</p>
+				</a></li>
+				<li data-icon="false"><a href="#contentDetail">
+					<img src="images/album-ag.jpg" alt="" class="circleImg">
+					<h3>图文标题02</h3>
+					<div class="tags">
+						<span class="tag">男士20~30岁的短袖衬衫</span>
+					</div>
+					<p>说明: 来参加我们的45分钟的男性是海岸城...</p>
+				</a></li> 
+			</ul>
+		</div>
+	</div><!-- content page -->
+	<div data-role="page" data-theme="e"  id="contentDetail">  
+		<div class="qrcode">
+			<div class="qrcodeBox"><img src="images/qrcode.jpg" alt="activity"></div>
+		</div>
+		<div  data-role="content" class="ui-content">
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false" class="ui-li-no-thumb">
+					<a href="#activityDetail">  
+						<h3>内容标题</h3> 
+						<div class="tags">
+							<span class="tag">购物推广</span><span class="tag">产品图文</span> 
+						</div>
+						<p>发布时间: 2015/8/12,15:00 </p>
+					</a>
+				</li>
+			</ul>
+			<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+				<li data-icon="false">
+					<a href="#activityDetail">  
+						<div class="listBanner"><img src="images/banner.jpg" alt="banner"></div>
+						<h3>我的天南，你的手上竟然张了个熊抱</h3> 
+					</a>
+				</li>
+				<li data-icon="false">
+					<a href="#activityDetail">  
+						<h3>我的天南，你的手上竟然张了个熊抱</h3>
+						<img src="images/album-hc.jpg" alt="content">  
+					</a>
+				</li>
+				<li data-icon="false">
+					<a href="#activityDetail">  
+						<h3>我的天南，你的手上竟然张了个熊抱</h3>
+						<img src="images/album-hc.jpg" alt="content">  
+					</a>
+				</li>
+				<li data-icon="false">
+					<a href="#activityDetail">  
+						<h3>我的天南，你的手上竟然张了个熊抱</h3>
+						<img src="images/album-hc.jpg" alt="content">  
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div><!-- content detail page -->
+	<div data-role="page" data-theme="e" id="personal" data-navTitle="个人中心">   
+		<div  data-role="content" class="ui-content">
+			<ul data-role="listview" data-shadow="false">
+				<li>
+					<a href="#personalDetail">
+						<span class="photo"><img src="images/photo.png" alt="photo"></span>
+						<img src="images/best-personal.jpg" alt="">
+						<div class="personalText">
+							<h3 class="starTitle">Joey Kevin </h3> 
+							<p>六月最佳销售</p>
+						</div> 
+					</a>
+				</li>
+				<li>
+					<a href="#integralDetail">
+						<div class="personalIntegral">
+							<h3>现有积分:25</h3>
+							<div class="stars">
+						        <i class="cus-icon-star"></i>
+						        <i class="cus-icon-star"></i>
+						        <i class="cus-icon-star"></i> 
+						        <i class="cus-icon-star"></i> 
+						        <i class="cus-icon-star"></i> 
+							</div> 
+							<div class="progress-bar" data-length="25"> 
+							</div> 
+						</div>
+					</a>
+				</li> 
+			</ul>
+			<div data-role="tabs" class="tabs">
+				<div data-role="navbar">
+					<ul>
+					  <li><a href="#week" data-ajax="false">周</a></li>
+					  <li><a href="#month" data-ajax="false">月</a></li>
+					  <li><a href="#year" data-ajax="false">年</a></li>
+					</ul>
+				</div>
+				<div id="week">
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">销售额</span><span class="pull-right">共¥155000</span></div><div class="chart">
+								<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+					</ul> 
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">提成</span><span class="pull-right">共¥6000</span></div><div class="chart">
+								<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+					</ul>
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">引导分享</span><span class="pull-right">共30次扫码</span></div><div class="chart">
+								<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+					</ul>
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">转化率</span><span class="pull-right">平均25.8%</span></div><div class="chart">
+								<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+					</ul>
+					<div class="chartGuide">
+						<span class="dot"></span><span>引导分享</span><span class="dot"></span><span>销售</span>
+					</div>
+				</div>
+				<div id="month">
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">销售额</span><span class="pull-right">共¥155000</span></div><div class="chart">
+								<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>
+					</ul> 
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">提成</span><span class="pull-right">共¥6000</span></div><div class="chart">
+								<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>	
+					</ul>
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">引导分享</span><span class="pull-right">共30次扫码</span></div><div class="chart">
+								<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>	
+					</ul>
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">转化率</span><span class="pull-right">平均25.8%</span></div><div class="chart">
+								<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>	
+					</ul>
+					<div class="chartGuide">
+						<span class="dot"></span><span>引导分享</span><span class="dot"></span><span>销售</span>
+					</div>
+				</div>
+				<div id="year">
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">销售额</span><span class="pull-right">共¥155000</span></div><div class="chart">
+								<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+					</ul> 
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">提成</span><span class="pull-right">共¥6000</span></div><div class="chart">
+								<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+					</ul>
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">引导分享</span><span class="pull-right">共30次扫码</span></div><div class="chart">
+								<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+					</ul>
+					<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+						<li data-icon="false">
+							<div class="chartTitle"><span class="pull-left">转化率</span><span class="pull-right">平均25.8%</span></div><div class="chart">
+								<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+								<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+							</div>  
+						</li>  
+					</ul>
+					<ul class="chartX">
+						<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+					</ul>
+					<div class="chartGuide">
+						<span class="dot"></span><span>引导分享</span><span class="dot"></span><span>销售</span>
+					</div>
+				</div>
+		    </div>
+		</div>
+	</div><!-- personal page -->
+	<div data-role="page" data-theme="e"  id="personalDetail">  
+		<div  data-role="content" class="ui-content">
+			<div class="editInf">
+				<h2>Joey Kevin</h2>
+				<span class="editBtn"></span>
+			</div>
+			<div>
+				<span class="photo"><img src="images/photo.png" alt="photo"></span> 
+				<div class="personalText">
+					<h3 class="starTitle">Wechat Name</h3>  
+				</div>  
+			</div>
+			<ul data-role="list" data-inset="true" data-shadow="false" class="list">
+				<li>
+					<h4 class="blueTitle">工号</h4>
+					<h3 contenteditable="false">#345787974</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">微信ID</h4>
+					<h3 contenteditable="false">85787974</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">门店</h4>
+					<h3 contenteditable="false">徐汇门店</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">地址</h4>
+					<h3 contenteditable="false">上海</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">性别</h4>
+					<h3 contenteditable="false">男</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">手机</h4>
+					<h3>13585782659</h3>
+				</li>
+			</ul>
+		</div>
+	</div><!-- personal detail page -->
+	<div data-role="page" data-theme="e" id="integralDetail">
+		<div  data-role="content" class="ui-content"> 
+			<div class="personalIntegral">
+				<h3>现有积分:25</h3>
+				<div class="stars">
+			        <i class="cus-icon-star"></i>
+			        <i class="cus-icon-star"></i>
+			        <i class="cus-icon-star"></i> 
+			        <i class="cus-icon-star"></i> 
+			        <i class="cus-icon-star"></i> 
+				</div> 
+				<div class="progress-bar" data-length="25"> 
+				</div>
+				<h4>离下一个等级还差65积分</h4> 
+			</div> 
+			<div class="historyIntegral">
+				<h4 class="blueTitle">积分历史</h4>
+				<a href="#integralDetailT" class="btn">积分规则</a>
+			</div>
+			<ul class="integral">
+				<li>
+					<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+					<p>一兆韦德健身优惠券</p>
+					<p>2016/08/08, 16:24</p>
+				</li>
+				<li>
+					<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+					<p>一兆韦德健身优惠券</p>
+					<p>2016/08/08, 16:24</p>
+				</li>
+				<li>
+					<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+					<p>一兆韦德健身优惠券</p>
+					<p>2016/08/08, 16:24</p>
+				</li>
+				<li>
+					<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+					<p>一兆韦德健身优惠券</p>
+					<p>2016/08/08, 16:24</p>
+				</li>
+				<li>
+					<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+					<p>一兆韦德健身优惠券</p>
+					<p>2016/08/08, 16:24</p>
+				</li>
+			</ul>
+		</div>
+	</div><!-- integralDetail page -->
+	<div data-role="page" data-theme="e" id="integralDetailT">
+		<div  data-role="content" class="ui-content">
+			<h3>积分规则</h3>
+			<h4 class="blueTitle">积分的获得</h4>	 
+			<ol>
+				<li>购物：购买正价商品，都可以获得积分(0元  1折、赠品都不送积分，促销品积分）。</li>
+				<li>评价：购物后评价，可以获取不同额度的积 分根据商品本身积分高低，以及评价详细。</li>
+			</ol>
+			<h4 class="blueTitle">积分的使用</h4>	 
+			<ol>
+				<li>进行“夺宝”，免费获得试用产品，以及加  0元拍卖，拍得大奖！</li>
+				<li>可直接用于支付积分商城网站订单，消费100积分可抵1元现金使用。</li>
+ 				<li>积分支付不得超过每笔订单结算金额的20(不含运费).</li>
+			</ol>
+		</div>
+	</div><!-- integralDetailT page -->
+	<div data-role="page" data-theme="e" id="filterDetail">
+		<div  data-role="content" class="ui-content">
+			 <h4>排序方式</h4>
+			 <div class="btnGroup">
+			 	<button class="btn active" data-shadow="false" data-inline="true" class="active"><span>分类</span></button>
+			 	<button class="btn" data-shadow="false" data-inline="true"><span>时间</span></button>
+			 	<button class="btn" data-shadow="false" data-inline="true"><span>标题</span></button>
+			 </div>
+			 <h4>图文类别</h4>
+			 <label for="select-choice-a" class="select"></label>
+			 <select name="select-choice-a" id="select-choice-a" data-nactive-menu="false" data-shadow="false">
+			 	<option value="all">全部</option>
+			 	<option value="only title">仅标题</option>
+			 	<option value="only image">仅图像</option>
+			 	<option value="only content">仅内容</option>
+			 </select>
+			 <button class="btn blueBtn" type="submit" data-shadow="false"><span>确认</span></button>
+		</div>
+	</div><!-- filterDetail page -->
+	<div data-role="page" data-theme="e" id="team" data-navTitle="团队中心">  
+		 <div data-role="tabs">
+			<div data-role="navbar" class="blueTab">
+				<ul>
+				  <li><a href="#teamAnalysis" data-ajax="false">分析</a></li>
+				  <li><a href="#teamStore" data-ajax="false">门店对比</a></li>
+				  <li><a href="#teamClerk" data-ajax="false">店员对比</a></li>
+				</ul>
+			</div>
+			<div  data-role="content" class="ui-content">
+				<div id="teamAnalysis" data-transition="slide">
+					<div data-role="tabs" class="tabs">
+						<div data-role="navbar">
+							<ul>
+							  <li><a href="#week" data-ajax="false">周</a></li>
+							  <li><a href="#month" data-ajax="false">月</a></li>
+							  <li><a href="#year" data-ajax="false">年</a></li>
+							</ul>
+						</div>
+						<div id="week">
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">销售额</span><span class="pull-right">共¥155000</span></div><div class="chart">
+										<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+							</ul> 
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">提成</span><span class="pull-right">共¥6000</span></div><div class="chart">
+										<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+							</ul>
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">引导分享</span><span class="pull-right">共30次扫码</span></div><div class="chart">
+										<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+							</ul>
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">转化率</span><span class="pull-right">平均25.8%</span></div><div class="chart">
+										<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li>	
+							</ul>
+							<div class="chartGuide">
+								<span class="dot"></span><span>引导分享</span><span class="dot"></span><span>销售</span>
+							</div>
+						</div>
+						<div id="month">
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">销售额</span><span class="pull-right">共¥155000</span></div><div class="chart">
+										<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>
+							</ul> 
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">提成</span><span class="pull-right">共¥6000</span></div><div class="chart">
+										<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>	
+							</ul>
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">引导分享</span><span class="pull-right">共30次扫码</span></div><div class="chart">
+										<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>	
+							</ul>
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">转化率</span><span class="pull-right">平均25.8%</span></div><div class="chart">
+										<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>6/1</li><li>6/5</li><li>6/10</li><li>6/15</li><li>6/20</li><li>6/25</li><li>7/1</li>	
+							</ul>
+							<div class="chartGuide">
+								<span class="dot"></span><span>引导分享</span><span class="dot"></span><span>销售</span>
+							</div>
+						</div>
+						<div id="year">
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">销售额</span><span class="pull-right">共¥155000</span></div><div class="chart">
+										<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+							</ul> 
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">提成</span><span class="pull-right">共¥6000</span></div><div class="chart">
+										<ul class="chartY"><li>4k<li><li>3k</li><li>2k</li><li>1k</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+							</ul>
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">引导分享</span><span class="pull-right">共30次扫码</span></div><div class="chart">
+										<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+							</ul>
+							<ul data-role="listview" data-inset="true" data-theme="c" data-shadow="false">
+								<li data-icon="false">
+									<div class="chartTitle"><span class="pull-left">转化率</span><span class="pull-right">平均25.8%</span></div><div class="chart">
+										<ul class="chartY"><li>20<li><li>15</li><li>10</li><li>5</li></ul>
+										<div class="chartImag"><img src="images/chart.jpg" alt="chart" /></div>
+									</div>  
+								</li>  
+							</ul>
+							<ul class="chartX">
+								<li>2011</li><li>2012</li><li>2013</li><li>2014</li><li>2015</li><li>2016</li><li>2017</li>		
+							</ul>
+							<div class="chartGuide">
+								<span class="dot"></span><span>引导分享</span><span class="dot"></span><span>销售</span>
+							</div>
+						</div>
+			    	</div>
+				    <h2 class="leftTitle"  style="margin-top:0">最佳门店</h2>
+					<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>1.金汇南路门店</h3>
+							<div class="tags">
+								<span class="tag">钻戒</span><span class="tag">衣服</span>
+							</div>
+							<p>上海市金汇南路800号</p>
+							<span class="salesVolume best">¥85.3万</span>
+						</a></li>
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-ag.jpg" alt="" class="circleImg">
+							<h3>2.张江高科门店</h3>
+							<div class="tags">
+								<span class="tag">新店</span>
+							</div>
+							<p>上海市浦东区南京路86号</p>
+							<span class="salesVolume best">¥75.3万</span>
+						</a></li> 
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-ag.jpg" alt="" class="circleImg">
+							<h3>3.徐家汇门店</h3>
+							<div class="tags">
+								<span class="tag">产品</span>
+							</div>
+							<p>上海市徐汇区800号</p>
+							<span class="salesVolume best">¥72.3万</span>
+						</a></li> 
+					</ul>
+					<h2 class="leftTitle">最差门店</h2>
+					<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>1.金汇南路门店</h3>
+							<div class="tags">
+								<span class="tag">钻戒</span><span class="tag">衣服</span>
+							</div>
+							<p>上海市金汇南路800号</p>
+							<span class="salesVolume worst">¥5.3万</span>
+						</a></li>
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-ag.jpg" alt="" class="circleImg">
+							<h3>2.张江高科门店</h3>
+							<div class="tags">
+								<span class="tag">新店</span>
+							</div>
+							<p>上海市浦东区南京路86号</p>
+							<span class="salesVolume worst">¥8.8万</span>
+						</a></li> 
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-ag.jpg" alt="" class="circleImg">
+							<h3>3.徐家汇门店</h3>
+							<div class="tags">
+								<span class="tag">产品</span>
+							</div>
+							<p>上海市徐汇区800号</p>
+							<span class="salesVolume worst">¥10.3万</span>
+						</a></li> 
+					</ul>
+					<h2 class="leftTitle">最佳店员</h2>
+					<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>1.Jackie Fong</h3>
+							<p>徐汇门店</p>
+							<p class="tags">
+								<span class="tag">钻戒</span><span>工号: 83585782344</span>
+							</p> 
+							<span class="salesVolume best">¥8.2万</span>
+						</a></li>
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>2.张宇</h3>
+							<p>徐汇门店</p>
+							<p class="tags">
+								<span class="tag">钻戒</span><span>工号: 83585782344</span>
+							</p> 
+							<span class="salesVolume best">¥7.2万</span>
+						</a></li>
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>3.李雨桐</h3>
+							<p>徐汇门店</p>
+							<p class="tags">
+								<span class="tag">钻戒</span><span>工号: 83585782344</span>
+							</p> 
+							<span class="salesVolume best">¥5.2万</span>
+						</a></li>
+					</ul>
+					<h2 class="leftTitle">最差店员</h2>
+					<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>1.Jackie Fong</h3>
+							<p>徐汇门店</p>
+							<p class="tags">
+								<span class="tag">钻戒</span><span>工号: 83585782344</span>
+							</p> 
+							<span class="salesVolume worst">¥4894</span>
+						</a></li>
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>2.张宇</h3>
+							<p>徐汇门店</p>
+							<p class="" class="tags">
+								<span class="tag">钻戒</span><span>工号: 83585782344</span>
+							</p> 
+							<span class="salesVolume worst">¥6894</span>
+						</a></li>
+						<li data-icon="false"><a href="#contentDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3>3.李雨桐</h3>
+							<p>徐汇门店</p>
+							<p class="" class="tags">
+								<span class="tag">钻戒</span><span>工号: 83585782344</span>
+							</p> 
+							<span class="salesVolume worst">¥7894</span>
+						</a></li>
+					</ul>
+				</div>
+				<div id="teamStore" data-transition="slide">
+					<form id="teamStoreOne">
+						<h4>最多选择10个门店</h4>
+						<label for="select-native-geography" class="labelSelect">选择地理分区</label>
+						<select name="select-native-geography" id="select-native-geography"  data-shadow="false">
+							<option value="">中国华东</option>
+							<option value="">中国西北</option>
+							<option value="">中国中部</option>
+						</select>
+						<label for="select-native-province" class="labelSelect">选择省份</label>
+						<select name="select-native-province" id="select-native-province"  data-shadow="false">
+							<option value="">上海</option>
+							<option value="">北京</option>
+							<option value="">广州</option>
+						</select>
+						<label for="select-native-province" class="labelSelect">选择地区</label>
+						<select name="select-native-province" id="select-native-province"  data-shadow="false"  data-shadow="false">
+							<option value="">徐汇区</option>
+							<option value="">静安区</option>
+							<option value="">浦东新区</option>
+						</select>
+						<div class="btnGroup">
+							<button class="btn" data-icon="slected" data-iconpos="right" data-inline="true" data-shadow="false"><span>徐汇1号</span></button>
+							<button class="btn btn-default" data-icon="plus" data-iconpos="right" data-inline="true" data-shadow="false"><span>徐汇2号</span></button>
+							<button class="btn" data-icon="slected" data-iconpos="right" data-inline="true" data-shadow="false"><span>徐汇3号</span></button>
+							<button class="btn" data-icon="slected" data-iconpos="right" data-inline="true" data-shadow="false"><span>徐汇4号</span></button>
+							<button class="btn" data-icon="slected" data-iconpos="right" data-inline="true" data-shadow="false"><span>徐汇张杨北路金沙江路5号老字号门</span></button>
+						</div>
+						<a href="#teamStoreTwo" class="btn blueBtn ui-btn ui-corner-all" type="submit" data-shadow="false" data-role="button">开始对比</a>
+					</form>  
+					<div id="teamStoreTwo" data-role="panel" data-position="right" data-display="push" data-dismissible="false"  data-swipe-close="false"> 
+						<h4>已选择徐汇门店</h4>
+						<h3>徐汇1号, 徐汇3号, 徐汇4号,徐汇张杨北路金沙江路5号老字号门</h3> 
+						<a href="#teamStoreOne" class="btn ui-btn ui-corner-all" data-rel="close" data-shadow="false" data-role="button">重新选择门店</a> 
+						<div data-role="tabs" class="tabs">
+							<div data-role="navbar">
+								<ul>
+								  <li><a href="#teamStoreWeek" data-ajax="false">周</a></li>
+								  <li><a href="#teamStoreMonth" data-ajax="false">月</a></li>
+								  <li><a href="#teamStoreYear" data-ajax="false">年</a></li>
+								</ul>
+							</div>
+							<div id="teamStoreWeek">
+								<div class="listTitle">
+									<ul>
+										<li>销售额</li>
+										<li>提成</li>
+										<li>引导分享</li>
+										<li>转化率</li>
+									</ul>
+								</div>
+								<div class="compareList">
+									<ul class="moveList">
+										<li class="loveLi">
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇1号</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li class="greenText">¥35.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇2号</h6></li>
+												<li>¥85.4万</li>
+												<li>¥35.4万</li>
+												<li class="greenText">1.4万次</li>
+												<li>94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇3号</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li>¥35.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+									</ul>
+								</div>
+							</div>
+							<div id="teamStoreMonth">
+								<div class="listTitle">
+									<ul>
+										<li>销售额</li>
+										<li>提成</li>
+										<li>引导分享</li>
+										<li>转化率</li>
+									</ul>
+								</div>
+								<div class="compareList">
+									<ul class="moveList">
+										<li class="loveLi">
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇1号</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li class="greenText">¥35.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇2号</h6></li>
+												<li>¥845.4万</li>
+												<li>¥335.4万</li>
+												<li class="greenText">18.4万次</li>
+												<li>94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇3号</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li>¥035.4万</li>
+												<li>18.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+									</ul>
+								</div>
+							</div>
+							<div id="teamStoreYear">
+								<div class="listTitle">
+									<ul>
+										<li>销售额</li>
+										<li>提成</li>
+										<li>引导分享</li>
+										<li>转化率</li>
+									</ul>
+								</div>
+								<div class="compareList">
+									<ul class="moveList">
+										<li class="loveLi">
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇1号</h6></li>
+												<li class="greenText">¥8532.4万</li>
+												<li class="greenText">¥3225.4万</li>
+												<li>12.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇2号</h6></li>
+												<li>¥835.4万</li>
+												<li>¥335.4万</li>
+												<li class="greenText">231.4万次</li>
+												<li>94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>徐汇3号</h6></li>
+												<li class="greenText">¥835.4万</li>
+												<li>¥335.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="teamClerk" data-transition="slide">
+					<form id="teamClerkOne">
+						<h3>同一家门店的店员可对比</h3>
+						<label for="select-native-geography" class="labelSelect">选择洲</label>
+						<select name="select-native-geography" id="select-native-geography"  data-shadow="false">
+							<option value="">中国华东</option>
+							<option value="">中国西北</option>
+							<option value="">中国中部</option>
+						</select>
+						<label for="select-native-province" class="labelSelect">选择省份</label>
+						<select name="select-native-province" id="select-native-province"  data-shadow="false">
+							<option value="">上海</option>
+							<option value="">北京</option>
+							<option value="">广州</option>
+						</select>
+						<label for="select-native-province" class="labelSelect">选择地区</label>
+						<select name="select-native-province" id="select-native-province"  data-shadow="false"  data-shadow="false">
+							<option value="">徐汇区</option>
+							<option value="">静安区</option>
+							<option value="">浦东新区</option>
+						</select> 
+						<label for="select-native-province" class="labelSelect">选择门店</label>
+						<select name="select-native-province" id="select-native-province"  data-shadow="false"  data-shadow="false">
+							<option value="">徐汇1号</option>
+							<option value="">徐汇2号</option>
+							<option value="">徐汇3号</option>
+						</select> 
+						<a href="#teamClerkTwo" class="btn blueBtn ui-btn ui-corner-all compareBtn" type="submit" data-shadow="false" data-role="button">开始对比</a>
+					</form>  
+					<div id="teamClerkTwo" data-role="panel" data-position="right" data-display="push" data-dismissible="false"  data-swipe-close="false"> 
+						<h4>已选择徐汇1号门店</h4>
+						<ul class="clerkList">
+							<li><img src="images/album-hc.jpg" alt="" class="circleImg"><h5>程海波</h5></li>
+							<li><img src="images/album-hc.jpg" alt="" class="circleImg"><h5>秦斯斯</h5></li>
+							<li><img src="images/album-hc.jpg" alt="" class="circleImg"><h5>杨光</h5></li>
+						</ul>
+						<a href="#teamClerkOne" class="btn ui-btn ui-corner-all" data-rel="close" data-shadow="false" data-role="button">重新选择门店</a> 
+						<div data-role="tabs" class="tabs">
+							<div data-role="navbar">
+								<ul>
+								  <li><a href="#teamStoreWeek" data-ajax="false">周</a></li>
+								  <li><a href="#teamStoreMonth" data-ajax="false">月</a></li>
+								  <li><a href="#teamStoreYear" data-ajax="false">年</a></li>
+								</ul>
+							</div>
+							<div id="teamStoreWeek">
+								<div class="listTitle">
+									<ul>
+										<li>销售额</li>
+										<li>提成</li>
+										<li>引导分享</li>
+										<li>转化率</li>
+									</ul>
+								</div>
+								<div class="compareList">
+									<ul class="moveList">
+										<li class="loveLi">
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>程海波</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li class="greenText">¥35.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>秦斯斯</h6></li>
+												<li>¥85.4万</li>
+												<li>¥35.4万</li>
+												<li class="greenText">1.4万次</li>
+												<li>94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>杨光</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li>¥35.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+									</ul>
+								</div>
+							</div>
+							<div id="teamStoreMonth">
+								<div class="listTitle">
+									<ul>
+										<li>销售额</li>
+										<li>提成</li>
+										<li>引导分享</li>
+										<li>转化率</li>
+									</ul>
+								</div>
+								<div class="compareList">
+									<ul class="moveList">
+										<li class="loveLi">
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>程海波</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li class="greenText">¥35.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>秦斯斯</h6></li>
+												<li>¥845.4万</li>
+												<li>¥335.4万</li>
+												<li class="greenText">18.4万次</li>
+												<li>94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>杨光</h6></li>
+												<li class="greenText">¥85.4万</li>
+												<li>¥035.4万</li>
+												<li>18.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+									</ul>
+								</div>
+							</div>
+							<div id="teamStoreYear">
+								<div class="listTitle">
+									<ul>
+										<li>销售额</li>
+										<li>提成</li>
+										<li>引导分享</li>
+										<li>转化率</li>
+									</ul>
+								</div>
+								<div class="compareList">
+									<ul class="moveList">
+										<li class="loveLi">
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>程海波</h6></li>
+												<li class="greenText">¥8532.4万</li>
+												<li class="greenText">¥3225.4万</li>
+												<li>12.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>秦斯斯</h6></li>
+												<li>¥835.4万</li>
+												<li>¥335.4万</li>
+												<li class="greenText">231.4万次</li>
+												<li>94.8%</li> 
+											</ul>
+										</li> 
+										<li>
+											<ul class="Inlist">
+												<li><img src="images/album-af.jpg" alt="" class="circleImg"><h6>杨光</h6></li>
+												<li class="greenText">¥835.4万</li>
+												<li>¥335.4万</li>
+												<li>1.4万次</li>
+												<li class="greenText">94.8%</li> 
+											</ul>
+										</li> 
+									</ul>
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- teamAnalysis page -->
+	<div data-role="page" data-theme="e" id="guide" data-navTitle="引导"> 
+		<div data-role="tabs">
+			<div data-role="navbar"  class="blueTab">
+				<ul>
+				  <li><a href="#guideProduct" data-ajax="false">产品类别</a></li>
+				  <li><a href="#guidePeople" data-ajax="false">联系人</a></li> 
+				</ul>
+			</div>
+			<div  data-role="content" class="ui-content">
+				<div id="guideProduct">
+					<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+						<li data-icon="false" class="ui-li-no-thumb">
+							<a href="#guideProductDetail"> 
+								<img src="images/album-af.jpg" alt="" class="circleImg">
+								<h3>男士衣服</h3>  
+							</a>
+						</li>
+						<li data-icon="false" class="ui-li-no-thumb">
+							<a href="#guideProductDetail"> 
+								<img src="images/album-af.jpg" alt="" class="circleImg">
+								<h3>女士衣服</h3>   
+							</a>
+						</li>
+						<li data-icon="false" class="ui-li-no-thumb">
+							<a href="#guideProductDetail"> 
+								<img src="images/album-af.jpg" alt="" class="circleImg">
+								<h3>首饰</h3>   
+							</a>
+						</li>
+						<li data-icon="false" class="ui-li-no-thumb">
+							<a href="#guideProductDetail"> 
+								<img src="images/album-af.jpg" alt="" class="circleImg">
+								<h3>男士裤子</h3>   
+							</a>
+						</li>
+						<li data-icon="false" class="ui-li-no-thumb">
+							<a href="#guideProductDetail"> 
+								<img src="images/album-af.jpg" alt="" class="circleImg">
+								<h3>女士内衣</h3>   
+							</a>
+						</li>
+						<li data-icon="false" class="ui-li-no-thumb">
+							<a href="#guideProductDetail"> 
+								<img src="images/album-af.jpg" alt="" class="circleImg">
+								<h3>门票</h3>   
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id="guidePeople">
+					<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+						<li data-icon="false"><a href="#guidePeopletDetail">
+							<img src="images/album-af.jpg" alt="" class="circleImg">
+							<h3 class="starTitle">Jackie Fong</h3> 
+							<p>2016/07/08, 15:30</p>
+						</a></li>
+						<li data-icon="false"><a href="#guidePeopletDetail">
+							<img src="images/album-ag.jpg" alt="" class="circleImg">
+							<h3 class="starTitle">李先生</h3> 
+							<p>2016/07/08, 15:30</p>
+						</a></li>
+						<li data-icon="false"><a href="#guidePeopletDetail">
+							<img src="images/album-bb.jpg" alt="" class="circleImg">
+							<h3 class="starTitle">李先生</h3> 
+							<p>2016/07/08, 15:30</p>
+						</a></li>
+						<li data-icon="false"><a href="#guidePeopletDetail">
+							<img src="images/album-hc.jpg" alt="" class="circleImg">
+							<h3>李女士</h3> 
+							<p>2016/07/08, 15:30</p>
+						</a></li>
+						<li data-icon="false"><a href="#guidePeopletDetail">
+							<img src="images/album-hc.jpg" alt="" class="circleImg">
+							<h3>王太太</h3> 
+							<p>2016/07/08, 15:30</p>
+						</a></li>
+						<li data-icon="false"><a href="#guidePeopletDetail">
+							<img src="images/album-hc.jpg" alt="" class="circleImg">
+							<h3>程超</h3> 
+							<p>2016/07/08, 15:30</p>
+						</a></li>
+					</ul>
+				</div>
+			</div> 
+		</div> 
+	</div><!-- guide page -->
+	<div data-role="page" data-theme="e" id="guideProductDetail">  
+		<div class="qrcode">
+			<div class="qrcodeBox"><img src="images/qrcode.jpg" alt="activity"></div>
+		</div>
+	</div><!-- guideProductDetail page -->
+	<div data-role="page" data-theme="e" id="guidePeopletDetail">  
+		<div  data-role="content" class="ui-content">
+			<div class="editInf">
+				<h2>张几种</h2>
+				<span class="editBtn cus-icon-edit"></span>
+			</div>
+			<div>
+				<span class="photo"><img src="images/photo.png" alt="photo"></span> 
+				<div class="personalText">
+					<h3 class="starTitle">Wechat Name</h3>  
+				</div>  
+				<button class="btn" data-shadow="false"><span>发送消息</span></button>
+			</div>
+			<ul data-role="list" data-inset="true" data-shadow="false" class="list">
+				<li>
+					<h4 class="blueTitle">扫码时间</h4>
+					<h3 contenteditable="false">2016/07/08, 15:24</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">兴趣类别</h4>
+					<h3 contenteditable="false">男士衣服</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">地址</h4>
+					<h3 contenteditable="false">上海</h3>
+				</li> 
+				<li>
+					<h4 class="blueTitle">性别</h4>
+					<h3 contenteditable="false">男</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">手机</h4>
+					<h3>13585782659</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">感兴趣的产品</h4>
+					<h3>花花公子短袖T恤, UYUK 棉麻短袖T恤</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">备注</h4>
+					<h3>30-50岁的男性是海岸城的主要男性消费群体，同时，10-20岁的青少年的消费潜力也不可忽视。</h3>
+				</li>
+				<li>
+					<h4 class="blueTitle">历史</h4>
+					<ul class="integral">
+						<li>
+							<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+							<p>一兆韦德健身优惠券</p>
+							<p>2016/08/08, 16:24</p>
+						</li>
+						<li>
+							<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+							<p>一兆韦德健身优惠券</p>
+							<p>2016/08/08, 16:24</p>
+						</li>
+						<li>
+							<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+							<p>一兆韦德健身优惠券</p>
+							<p>2016/08/08, 16:24</p>
+						</li>
+						<li>
+							<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+							<p>一兆韦德健身优惠券</p>
+							<p>2016/08/08, 16:24</p>
+						</li>
+						<li>
+							<h4>分享优惠券获得<span class="blueTitle">5积分</span></h4>
+							<p>一兆韦德健身优惠券</p>
+							<p>2016/08/08, 16:24</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div><!-- guidePeopletDetail page -->
+	<div id="allStore" data-role="page" data-theme="e" data-navTitle="门店">
+		<div class="filterSearch">
+			<a href="#filterDetail" class="icon filter"></a>
+			<a href="#searchDetail2" data-rel="popup" data-transition="slide" class="searchLink">搜索</a>
+			<div id="searchDetail2" class="searchDetail" data-role="popup" data-inset="false" data-shadow="false"> 
+				<a href="#allStore" data-close="true" class="cancelSearch" data-role="button">取消</a>
+				<ul class="searchResult" data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search...">
+					<li>上海静安门店一号</li>
+					<li>上海静安门店二号</li>
+				</ul>
+			</div>
+        </div>
+		<div  data-role="content" class="ui-content">
+			<h2 class="leftTitle"  style="margin-top:0">所有门店</h2>
+			<ul data-role="listview" data-inset="true" data-shadow="false" class="contentList">
+				<li data-icon="false"><a href="#">
+					<img src="images/album-af.jpg" alt="" class="circleImg">
+					<h3 class="starTitle">金汇南路门店</h3>
+					<div class="tags">
+						<span class="tag">钻戒</span><span class="tag">衣服</span>
+					</div>
+					<p>上海市金汇南路800号</p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-ag.jpg" alt="" class="circleImg">
+					<h3 class="starTitle">张江高科门店</h3>
+					<div class="tags">
+						<span class="tag">新店</span>
+					</div>
+					<p>上海市浦东区南京路86号</p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-bb.jpg" alt="" class="circleImg">
+					<h3>徐家汇门店</h3>
+					<div class="tags">
+						<span class="tag">百年老店</span> <span class="tag">百销售第一</span> 
+					</div>
+					<p>上海市徐汇区800号</p>
+				</a></li>
+				<li data-icon="false" class="noBrd"><a href="#">
+					<img src="images/album-hc.jpg" alt="" class="circleImg">
+					<h3>静安区1号门店</h3>
+					<div class="tags">
+						<span class="tag">钻戒</span>
+					</div>
+					<p>上海市静安区闸北路80号</p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-ag.jpg" alt="" class="circleImg">
+					<h3 class="starTitle">张江高科门店</h3>
+					<div class="tags">
+						<span class="tag">新店</span>
+					</div>
+					<p>上海市浦东区南京路86号</p>
+				</a></li>
+				<li data-icon="false"><a href="#">
+					<img src="images/album-bb.jpg" alt="" class="circleImg">
+					<h3>徐家汇门店</h3>
+					<div class="tags">
+						<span class="tag">百年老店</span> <span class="tag">百销售第一</span> 
+					</div>
+					<p>上海市徐汇区800号</p>
+				</a></li>
+				<li data-icon="false" class="noBrd"><a href="#">
+					<img src="images/album-hc.jpg" alt="" class="circleImg">
+					<h3>静安区1号门店</h3>
+					<div class="tags">
+						<span class="tag">钻戒</span>
+					</div>
+					<p>上海市静安区闸北路80号</p>
+				</a></li>
+			</ul>
+		</div>
+	</div><!-- allStore page -->
+<script src="js/jquery.min.js"></script>  
+<script src="js/global.js"></script>  
+<script src="js/jquery.mobile-1.4.5.js"></script>  
+</body>
